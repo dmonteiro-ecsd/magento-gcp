@@ -9,7 +9,7 @@ node {
 
     try {
         //clean
-        sh "sudo chown -R jenkins:jenkins *"
+        sh "chown -R jenkins:jenkins *"
         stage ('Clean') {
             deleteDir()
         }
