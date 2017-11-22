@@ -9,7 +9,6 @@ node {
 
     try {
         //clean
-        sh "chown -R jenkins:jenkins *"
         stage ('Clean') {
             deleteDir()
         }
@@ -33,7 +32,6 @@ node {
         stage 'Tool Setup'
         sh "php -v"
 
-        //trigger 1
         if (!fileExists('phing-latest.phar')) {
             sh "curl -sS -O https://www.phing.info/get/phing-latest.phar"
         }
