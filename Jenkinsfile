@@ -33,7 +33,7 @@ node {
         stage 'Tool Setup'
         sh "php -v"
 
-        //trigger
+        //trigger fuck!
         if (!fileExists('phing-latest.phar')) {
             sh "curl -sS -O https://www.phing.info/get/phing-latest.phar"
         }
